@@ -3,6 +3,14 @@ Heroku buildpack: Python
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Python apps, powered by [pip](http://www.pip-installer.org/).
 
+This is a special fork of the buildppack using [Wheel](http://wheel.readthedocs.org/en/latest/index.html).
+Wheel allows you to prebuild the python packages for the case where dev dependancies are not present in the Paas infra
+
+before uploading, make sure you run the command:
+
+   pip wheel -r requirements.txt
+
+In order to pre-build your packages
 
 Usage
 -----
